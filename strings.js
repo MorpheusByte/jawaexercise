@@ -180,3 +180,39 @@ iyimisin?`.length)
 // *=========================================================
 // *                 split() immutable
 // *=========================================================
+// Stringi belirtilen şekilde parçalara ayırır ve parçalarını bir diziye aktarır
+// str.split(seperator)
+// saparator : ayraç
+//! Parçaladığı elemanları bir diziye aktarır.
+
+let metin1 = "Clarusway IT Bootcamp Harvey"
+
+console.log(metin1.split(" "))
+console.log(metin1)
+let parcalanmısMetin = metin1.split(" ")
+console.log(parcalanmısMetin)
+
+for (let i = 0; i < parcalanmısMetin.length; i++) {
+    if (parcalanmısMetin[i] === "Harvey") {
+        console.log("Bu cümlede Harvey kelimesi geçiyor");
+    }else{
+        // console.log("Bu cümlede Harvey kelimesi geçmiyor")
+    }
+}
+
+// Verilen tarih bilgisini gün ay ve yıl olarak ayırma
+
+let date = "12.03.2025"
+let newDate = date.split(".")
+console.log(newDate)
+let gun = newDate[0]
+let ay = newDate[1]
+let yil = newDate[2]
+console.log("Gün:",gun)
+console.log("Ay:",ay)
+console.log("Yıl:",yil)
+
+
+let months =  "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec";
+let newMounth = months.split(" / ")
+console.log(newMounth)
