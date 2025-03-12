@@ -43,3 +43,16 @@ console.log(names[0].toUpperCase())
 
 const programinLanguage = new Array("Go", "JS" ,"Python")
 console.log(programinLanguage)
+
+const myArr = new Array(10)
+console.log(myArr)
+
+const sayilar = Array.of(4)
+console.log(sayilar)
+
+//? ===========================================================
+//?  DIZIYI DEGISTIREN (MUTATOR) METOTLAR
+//? ===========================================================
+
+// programinLanguage.push("HTML")
+// console.log(programinLanguage)
