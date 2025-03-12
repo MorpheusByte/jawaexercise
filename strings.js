@@ -216,3 +216,100 @@ console.log("Yıl:",yil)
 let months =  "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec";
 let newMounth = months.split(" / ")
 console.log(newMounth)
+
+/* -------------------------------------------------------------------------- */
+/*                               //? Join metodu                              */
+/* -------------------------------------------------------------------------- */
+// String metodu değildir
+// Javascript dilinde join metodu, biz dizi elemanı string olarak birleştirir. Join metodu dizi (array) alarak bunu virgül gibi bir karakter ile ayırarak string'e dönüştürür.
+
+console.log(newMounth.join("_"))
+
+/* -------------------------------------------------------------------------- */
+//?                               Reverse Metodu                              */
+/* -------------------------------------------------------------------------- */
+
+// String metodu değildir
+// reverse methodu ile bir diziyi tersine çevirebilmekteyiz. Dizi içerisindeki ilk değeri son, Son değeri ise ilk sıraya şeklinde sıralayabilmekteyiz.
+
+// Bir kelimeyi tersten yazdıran program
+
+let kelime1 = "Merhaba"
+console.log(kelime1.split("").reverse().join(""))
+let sentence = "yahşi günde yar yahşidir yaman günde yetiş gardaş"
+console.log(sentence.split(" ").reverse().join(" "))
+
+// Polindrom
+// baştan da terstende aynı okunan kelime
+
+let kelime2 = "madam"
+
+let mesaj =kelime2 === kelime2.split("").join("") ? "Polindromdur" : "Polindrom değildir"
+console.log(mesaj)
+
+/* ---------------------------------- */
+/*                Slice               */
+/* ---------------------------------- */
+//! Slice Metodu
+//? String içinde bir bölümü almak için kullanılır.
+// Slice(başlangıç index numarası, bitiş index numarası(bu numara dahil değildir))
+
+let sent = "Merhaba Cohort 19"
+
+console.log(sent.slice(0,7))
+console.log(sent.slice(8,14))
+
+// negatif değer geriye doğru verilebilir
+
+console.log(sent.slice(-9,-1))
+console.log(sent.slice(-9))
+
+/* ---------------------------------- */
+/*              Substring             */
+/* ---------------------------------- */
+//! substring(başlangıç index numarası,bitiş index numarası) 
+//Slicedan farkı negatif sayı kullanılmaz
+
+console.log(sent.substring(0,7))
+
+/* ---------------------------------- */
+/*               Substr               */
+/* ---------------------------------- */
+//! substr(başlangıç index numarası,kaç adet karakter alınacağı)
+// kullanılmıyor o yüzden üstü çizili modası geçmiş
+
+console.log(sent.substr(8,6))
+
+/* ---------------------------------- */
+/*!   String içinde arama işlemleri   */
+/* ---------------------------------- */
+
+// includes, indexOf, search ,match  metodlarını kullanabiliriz
+
+/* ---------------------------------- */
+/*              includes              */
+/* ---------------------------------- */
+
+//? includes()   ... yı içeriyor mu -> true yada false bir değer döndürür.
+//? caseSensitive bir özelliktir.
+
+let cumle = "to be or not To be, that is The question"
+
+console.log(cumle.includes("To be"))
+console.log(cumle.includes("TO BE"))
+console.log(cumle.toLocaleUpperCase().includes("TO BE"))
+
+// Bir site adresi güvenliği mi değil mi kontrolü
+// https : s secure
+
+let url = "https://clarusway.com"
+let msg = url.includes("https") ? "Bu site güvenlidir" : "Bu site güvenli değildir"
+console.log(msg)
+
+/* ---------------------------------- */
+/*               İndexOf              */
+/* ---------------------------------- */
+//? indexOf (aranacak metin, konum) Bir karakter yada karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir. Eğer o karakter yoksa olmadığını -1 değeri vererek gösterir. Büyük küçük harfe duyarlıdır. Sadece ilk gördüğünün index numarasını verir
+
+console.log(cumle.indexOf("be"))
+console.log(cumle.indexOf("test"))
