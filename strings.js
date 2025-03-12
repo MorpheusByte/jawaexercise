@@ -312,4 +312,56 @@ console.log(msg)
 //? indexOf (aranacak metin, konum) Bir karakter yada karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir. Eğer o karakter yoksa olmadığını -1 değeri vererek gösterir. Büyük küçük harfe duyarlıdır. Sadece ilk gördüğünün index numarasını verir
 
 console.log(cumle.indexOf("be"))
+// Aradığımız kelime yoksa -1 döndürür
 console.log(cumle.indexOf("test"))
+// 4'ten sonra ara demek için mesela
+console.log(cumle.indexOf("be",4))
+
+/* ---------------------------------- */
+/*               search              */
+/* ---------------------------------- */
+
+//? search() bir string içindeki aranan elemanın ilk index numarsını yazar. Bulamazsa -1 dönderir.
+// Büyük küçük harfe duyarlıdır. 
+
+console.log(cumle.search("be"))
+console.log(cumle.search("harwey"))
+
+//!REGEX- regular expression 
+// Regex regular expression denir. Bunların yazım stili / işaretiyledir.
+
+// Flags Kullanımı
+// Düzenli ifadelerde çeşitli bayraklar kullanarak aramayı değiştirebiliriz:
+
+// g : Global arama
+// i : Büyük/küçük harf duyarsız arama
+let variable = "HarveyWatson"
+console.log(variable.search(/w/i))
+
+// [A-Z], [a-z] [0-9] 
+
+let cumle5 = "to be or not To be, 450 That is The question 15"
+console.log(cumle5.search(/[A-Z]/g))
+console.log(cumle5.search(/[a-z]/g))
+console.log(cumle5.search(/[0-9]/g))
+
+// ^  olmayan
+console.log(cumle5.search(/[^a-z]/))
+
+/* ---------------------------------- */
+/*                 match              */
+/* ---------------------------------- */
+
+//?match metodu, bir dize içindeki bir düzenli ifadeye (RegEx) uyan kısımları bulur ve bir dizi olarak döner.
+// Bir dizi dönderir
+
+let phone = "My phone number is 234-567-8910"
+let result = phone.match(/\d+/g)
+console.log(result)
+
+let text3 = "Contact us at support@example.com or sales@example.com";
+
+let emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+
+let emails = text3.match(emailPattern);
+console.log(emails)
