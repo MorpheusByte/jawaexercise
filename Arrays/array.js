@@ -56,3 +56,30 @@ console.log(sayilar)
 
 // programinLanguage.push("HTML")
 // console.log(programinLanguage)
+
+const cars = ["BMW", "Audi", "Mercedes","Scoda"]
+
+console.log(cars)
+console.log(cars[4])
+
+/* -------------------------------------------------------------------------- */
+//!                                 PUSH METODU                               */
+/* -------------------------------------------------------------------------- */
+//* push() dizinin sonuna eleman ekler. ( Çok kullanılacak önemlidir)
+//* Yeni eleman eklenmiş halini döndürür.
+//* Yeni eklenmiş eleman ile birlikte eleman sayısını döndürür.
+
+const newCar = cars.push("Jeep")
+console.log(cars)
+console.log(newCar)
+
+/* -------------------------------------------------------------------------- */
+//!                                 POP METODU                                */
+/* -------------------------------------------------------------------------- */
+//** pop() son elemani siler ve sildigi elemani dondurur.
+
+const deletedcar = cars.pop()
+console.log(cars)
+
+console.log(deletedcar)
+
