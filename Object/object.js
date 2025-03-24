@@ -48,3 +48,57 @@ function PersonelList(id,ad,maas){
 
 const personel1= new PersonelList(1000,"Ali",50000)
 console.log(personel1)
+
+const personel2 = new PersonelList(1001, "Harvey", 55000);
+console.log(personel2);
+//! her nesne için ayrı bir kopya oluşturulan metodlar, bellek kullanımını arttırabilir
+
+//? 3. Object Literal (en çok kullanacağımız ve tercih edilen yöntem)
+
+const icecek = {
+  ad: "cay",
+  hazırlıkSüresi: "Yarım Saat",
+  tercihler: ["demli", "açık", "paşa çayı"],
+  menşei: "Rize",
+};
+
+console.log(icecek);
+
+//Boş Obje
+
+const ev = {};
+
+ev.oda = 5;
+ev.ısıtma = "doğalgaz";
+ev.havuz = true;
+
+console.log(ev);
+
+/* -------------------------------------------------------------------------- */
+
+let personal = {
+  name: "Brad",
+  lastName: "Pitt",
+  birth: 1988,
+  horoscobe: "Gemini",
+  isMaried: true,
+  children: ["chole", "shiloh", "angel"],
+  adress: { city: "losangeles", street: "brooklyn", number: 5 },
+  calculateAge: function () {
+    return new Date().getFullYear() - this.birth;
+  },
+
+  selamla: () => {
+    return "Merhaba";
+  },
+  // * Object içinde arrow function kullanılıyorsa this keywordu window nesnesine karşılık gelir. Zaten arrow functionın ortaya çıkma sebebi thislerden kurtulmaktır.
+
+  arrowFunction: () => {
+    return personal.isMaried;
+  },
+  
+};
+
+console.log(personal.calculateAge());
+console.log(personal.selamla());
+console.log(personal.arrowFunction());
