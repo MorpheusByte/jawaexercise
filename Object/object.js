@@ -142,5 +142,17 @@ console.log(personal)
 //? Bir objeyi kopyalama
 //! 1- Shallow Copy (sığ) Kopyalama
 
+
+
 //! 2 Deep Copy yöntemi
 // JSON.stringify() , JSON.parse()
+
+// let a = [1,2,3,4,5]
+// let b = a
+// a = 7
+// console.log(b);
+
+// a[0] = 11
+// console.log(b);
+// console.log(a);
+
