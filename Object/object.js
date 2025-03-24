@@ -141,18 +141,89 @@ console.log(personal)
 /* -------------------------------------------------------------------------- */
 //? Bir objeyi kopyalama
 //! 1- Shallow Copy (sığ) Kopyalama
-
-
+const fimaPersoneli = personal;
+console.log(fimaPersoneli);
+fimaPersoneli.name = "Fatma";
+console.log("Personal", personal.name);
+console.log("Personal", fimaPersoneli.name);
 
 //! 2 Deep Copy yöntemi
 // JSON.stringify() , JSON.parse()
+console.log("************************");
+const deepCopyPersonal = JSON.parse(JSON.stringify(personal));
+console.log(deepCopyPersonal);
+deepCopyPersonal.name = "Zehra";
+console.log(deepCopyPersonal);
+console.log(personal);
 
-// let a = [1,2,3,4,5]
-// let b = a
-// a = 7
-// console.log(b);
+//! 3- Object Assign
+//! 4 Spread Operatoru
+console.clear();
 
-// a[0] = 11
-// console.log(b);
-// console.log(a);
+//* ------------------------------------------------------ */
+//*                     OBJECT METHODS
+//* ------------------------------------------------------ */
+//? İçiçe (nested) Object kullanımı
 
+const employeeList = {
+  person1: { name: "Harvey", lastName: "Watson", age: 18 },
+  person2: { name: "Helen", lastName: "Kuttery", age: 28 },
+  person3: { name: "Ethan", lastName: "Specter", age: 33 },
+  person4: { name: "Ashley", lastName: "Arrow", age: 27 },
+};
+
+console.log(employeeList.person2.lastName);
+console.log(employeeList["person1"]["lastName"]);
+
+//* -------------------------------------------------------- */
+//*                   FOR - OF -IN YAPISI                    */
+//* -------------------------------------------------------- */
+//? for ... of
+//! for...of sıralı olan dizilerde kullanılır ama objectlerde daha komplex bir yapı olduğu için for-of kullanılmaz
+
+// for (const i of employeeList) {
+//     console.log(i)    //!employeeList is not iterable
+// }
+
+//? for in 
+//! for...in yapısı ile obje keyleri üzerinde döngü kurabiliriz ancak bu tavsiye edilen bir yöntem değildir. Bunun yerine obje özelliklerini diziye dönüştüren metodları kullanabiliriz
+
+for (const i in employeeList) {
+    console.log(i)
+}
+
+console.clear()
+
+/* -------------------------------------------------------------------------- */
+// for in yada for of yerine object  arraye çeviren yöntemler var
+// Bir object key - value çiftlerinden oluşur
+
+//?  KEY lere erişim sağlamak için Object.keys metodu kullanılır.
+
+const keys = Object.keys(personal) //!Array döner
+
+console.log(keys)
+
+// keys.forEach((i)=>console.log(i))
+
+//? VALUE lara erişim sağlamak için Object.values()
+
+
+const values = Object.values(personal) //!Array döner
+
+console.log(values)
+
+// values.forEach((i)=>console.log(i))
+
+//? OBJECT.ENTRIES
+
+
+const degerler = Object.entries(personal) //!Array döner
+console.log(degerler)
+
+
+/* ------------------------------------------------------ */
+//*         JSON -Javascript Script Object Notation       */
+//* ------------------------------------------------------ */
+
+console.clear()
