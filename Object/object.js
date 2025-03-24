@@ -137,3 +137,10 @@ personal.phone = "321-654-87-89"
 console.log(personal)
 personal[keyword] = 1990
 console.log(personal)
+
+/* -------------------------------------------------------------------------- */
+//? Bir objeyi kopyalama
+//! 1- Shallow Copy (sığ) Kopyalama
+
+//! 2 Deep Copy yöntemi
+// JSON.stringify() , JSON.parse()
