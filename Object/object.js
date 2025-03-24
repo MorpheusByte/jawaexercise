@@ -102,3 +102,4 @@ let personal = {
 console.log(personal.calculateAge());
 console.log(personal.selamla());
 console.log(personal.arrowFunction());
+
