@@ -103,3 +103,37 @@ console.log(personal.calculateAge());
 console.log(personal.selamla());
 console.log(personal.arrowFunction());
 
+//! Arrow functionda this window objesine karşılık gelir. Arrow functionda this kullanmıyoruz
+//! window objesi içinde isMarried isimli bir özellik bulamadığından undefined
+console.clear();
+
+/* -------------------------------------------------------------------------- */
+//* ------- OKUMA/ERİŞME ----------
+
+  //! 1- .(dot) notation ile erişim
+
+  console.log(personal.name)
+  console.log(personal.birth)
+  console.log(personal.children[2])
+  console.log(personal.children.forEach((child)=>console.log(child)))
+  console.log(personal.adress.city)
+  console.log(personal.adress.street)
+  console.log(personal.selamla())
+
+  //! 1- [] square brackets, özellik yöntemi
+
+  console.log(personal["name"])
+  console.log(personal["lastName"])
+  console.log(personal["adress"]["street"])
+  console.log(personal["horoscobe"])
+
+//dinamik değerlere erişim için avantajlıdır
+const keyword = "birth" 
+console.log(personal[keyword])
+console.clear()
+
+//?yeni bir özellik ekleme
+personal.phone = "321-654-87-89"
+console.log(personal)
+personal[keyword] = 1990
+console.log(personal)
