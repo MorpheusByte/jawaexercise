@@ -253,3 +253,12 @@ console.log(result)
 //!Reduce tekrar
 
 // every, some findlast find reduce kalan metodlar...
+
+const dizi = [1,3,5]
+
+dizi.reduce((acc,val)=>{
+    console.log("sayaç")
+    // console.log("akümülatör:",acc)
+    // console.log("val:",val)
+    return acc * val
+})
